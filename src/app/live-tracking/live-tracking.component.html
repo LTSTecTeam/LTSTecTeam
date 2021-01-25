@@ -1,0 +1,30 @@
+<div class="notifier-container">
+    <div class="row">
+        <div class="col-md-2">
+     	<!-- Left Part -->
+	<div class="left-part bg-white fixed-left-part" [ngClass]="{'show-panel': showSidebar}">
+		<div class="position-relative">
+			<div class="p-l-15 p-r-25 py-3 d-flex align-items-center border-bottom">
+				<input type="text" class="form-control" placeholder="Search Contact" [(ngModel)]='searchTerm'>
+			</div>
+			<ul class="contact-list list-style-none">
+				<li class="contact-item border-bottom p-1" *ngFor='let c of filterArray' [class.active]="c === selectedContact"
+					(click)="onSelect(c);">
+
+					<span class="ml-3 font-medium">{{c}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+        </div>
+        <div class="col-md-2">
+            1
+        </div>
+        <div class="col-md-2">
+            1
+        </div>
+        <div class="col-md-2">
+            1
+        </div>
+    </div>
+</div>>

@@ -12,12 +12,21 @@ import { SignupComponent } from './signup/signup.component';
 import { Signup2Component } from './signup2/signup2.component';
 
 import { AuthenticationRoutes } from './authentication.routing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgetPasswordService } from '../Services/Login/ForgetPassword';
+import { HttpClient } from '@angular/common/http';
+import { NotifierService } from 'angular-notifier';
+
+import { NotifierComponent } from '../component/notifier/notifier.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AuthenticationRoutes),
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule 
   ],
   declarations: [
     NotfoundComponent,
@@ -26,6 +35,8 @@ import { AuthenticationRoutes } from './authentication.routing';
     LockComponent,
     Login2Component,
     Signup2Component
-  ]
+
+  ],
+  providers:[ForgetPasswordService,HttpClient,NotifierComponent]
 })
 export class AuthenticationModule {}

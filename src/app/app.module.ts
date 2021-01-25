@@ -33,6 +33,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LiveTrackingComponent } from './live-tracking/live-tracking.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -61,7 +62,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BreadcrumbComponent,
     VerticalSidebarComponent,
     HorizontalNavigationComponent,
-    HorizontalSidebarComponent
+    HorizontalSidebarComponent,
+    LiveTrackingComponent
   ],
   imports: [
     CommonModule,

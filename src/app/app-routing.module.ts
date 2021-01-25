@@ -3,6 +3,7 @@ import { Routes } from "@angular/router";
 
 import { FullComponent } from "./layouts/full/full.component";
 import { BlankComponent } from "./layouts/blank/blank.component";
+import { LiveTrackingComponent } from "./live-tracking/live-tracking.component";
 
 export const Approutes: Routes = [
   {
@@ -98,6 +99,7 @@ export const Approutes: Routes = [
             (m) => m.SamplePagesModule
           ),
       },
+
     ],
   },
   {
@@ -112,6 +114,11 @@ export const Approutes: Routes = [
           ),
       },
     ],
+  },
+  {
+    path: "liveTracking",
+    component: LiveTrackingComponent,
+
   },
   {
     path: "**",
